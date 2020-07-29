@@ -56,6 +56,7 @@ body {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .heading-primary {
@@ -66,6 +67,7 @@ body {
     is visible when facing the viewer. With an identity transform,
     the front side of an element faces the viewer */
   backface-visibility: hidden;
+  margin-bottom: 60px;
 }
 
 .heading-primary-main {
@@ -141,4 +143,32 @@ body {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+/* pseudo classes are a special state of a selector */
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  /* 1 value gives same space to all, 2 gives the first one to top and bottom and second
+     to right and left, 4 will be top, right, bottom and left at last */
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 200px;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* x x, y, blur, color */
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
 }
